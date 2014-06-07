@@ -1,15 +1,15 @@
 angular.module('ngDiagrams')
-    .controller('sequenceController', function ($scope, parserService) {
+    .controller('sequenceController', function ($scope, parserService, renderService) {
         $scope.rawText = '';
 
-    $scope.commands = [];
+        $scope.commands = [];
+        $scope.textCanvas = [];
 
-        $scope.draw=function() {
-
-
+        $scope.draw = function () {
             var commands = parserService.parse($scope.rawText);
+            var renderResult = renderService.render(commands);
+
+            $scope.textCanvas = renderResult;
             $scope.commands = commands;
-
-
         }
     });
