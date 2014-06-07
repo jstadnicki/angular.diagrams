@@ -1,5 +1,5 @@
 angular.module('ngDiagrams')
-    .controller('sequenceController', function ($scope, parserService, renderService) {
+    .controller('sequenceController', function ($scope, $timeout, parserService, renderService) {
         $scope.rawText = 'A->B:foo();';
 
         $scope.commands = [];
@@ -7,6 +7,14 @@ angular.module('ngDiagrams')
 
         $scope.addCommand=function(operation) {
             $scope.rawText += 'A' + operation + 'B:foo();';
+        }
+
+        var timer;
+        $scope.afterChange = function () {
+            if (timer) {
+                $timeout.cancel(timer);
+            }
+            timer = $timeout($scope.draw, 250);
         }
 
         $scope.draw = function () {

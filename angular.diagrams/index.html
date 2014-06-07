@@ -27,10 +27,7 @@
                 </div>
                 <div class="column col-2-3">
                     <div class="row">
-                        <textarea ng-model="rawText"></textarea>
-                    </div>
-                    <div class="row">
-                        <button ng-click="draw()">draw</button>
+                        <textarea ng-change="afterChange()" ng-model="rawText"></textarea>
                     </div>
                 </div>
             </div>
