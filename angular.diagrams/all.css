@@ -21,6 +21,10 @@
     width: 67%;
 }
 
+.row {
+    width: 100%;
+}
+
 .foo {
     font-size: 14px;
 }

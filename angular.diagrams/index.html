@@ -11,24 +11,31 @@
     <script src="application/services/parserService.js"></script>
     <script src="application/services/renderService.js"></script>
     <script src="application/controllers/sequenceController.js"></script>
+    <script src="application/directives/toolbox.js"></script>
 </head>
 <body>
     <div class="container" ng-controller="sequenceController">
         <div class="column col-1-3">
-            <div class="row">
-                <textarea ng-model="rawText"></textarea>
-            </div>
-            <div class="row">
-                <button ng-click="draw()">draw</button>
+            <div class="column">
+                <div class="column col-1-3" style="background-color:pink">
+                    <ngd-toolbox></ngd-toolbox>
+                </div>
+                <div class="column col-2-3">
+                    <div class="row">
+                        <textarea ng-model="rawText"></textarea>
+                    </div>
+                    <div class="row">
+                        <button ng-click="draw()">draw</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="column col-2-3">
             <!--<canvas width="100" height="100" id="mycanvas" style="border:1px solid black"></canvas>-->
-                <textarea class="foo" ng-model="textCanvas">
-                </textarea>
+            <textarea class="foo" ng-model="textCanvas"></textarea>
         </div>
 
-        
+
     </div>
 </body>
 </html>

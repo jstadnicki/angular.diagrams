@@ -1,6 +1,6 @@
 angular.module('ngDiagrams')
     .controller('sequenceController', function ($scope, parserService, renderService) {
-        $scope.rawText = '';
+        $scope.rawText = 'A->B:foo()';
 
         $scope.commands = [];
         $scope.textCanvas = [];
