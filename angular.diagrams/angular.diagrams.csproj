@@ -65,6 +65,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="all.css" />
+    <Content Include="application\lib\angular.min.js" />
+    <Content Include="application\controllers\sequenceController.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
