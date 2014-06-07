@@ -5,7 +5,12 @@
     <script src="application/lib/angular.min.js"></script>
     <link href="all.css" rel="stylesheet" />
     <script type="text/javascript">
-        angular.module('ngDiagrams', []);
+        var app = angular.module('ngDiagrams', []);
+
+        app.run(function ($rootScope) {
+            $rootScope.supportedCommand = ["->", "<-","-->","<--"];
+        });
+
     </script>
     <script src="application/models/command.js"></script>
     <script src="application/services/parserService.js"></script>
