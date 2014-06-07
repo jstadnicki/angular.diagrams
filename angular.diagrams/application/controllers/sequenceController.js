@@ -5,8 +5,9 @@ angular.module('ngDiagrams')
         $scope.commands = [];
         $scope.textCanvas = [];
 
-        $scope.addCommand=function(operation) {
+        $scope.addCommand = function(operation) {
             $scope.rawText += 'A' + operation + 'B:foo();';
+            $scope.afterChange();
         }
 
         var timer;
