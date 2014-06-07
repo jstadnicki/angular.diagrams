@@ -5,14 +5,14 @@
     <script src="application/lib/angular.min.js"></script>
     <link href="all.css" rel="stylesheet" />
     <script type="text/javascript">
-        angular.module('ngDiagrams');
+        angular.module('ngDiagrams', []);
     </script>
     <script src="application/controllers/sequenceController.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" ng-controller="sequenceController">
         <div class="column col-1-3">
-            <textarea></textarea>
+            <textarea ng-model="rawText"></textarea>
         </div>
         <div class="column col-2-3">
             <canvas width="100" height="100" id="mycanvas" style="border:1px solid black"></canvas>
