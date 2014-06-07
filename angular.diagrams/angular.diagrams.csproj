@@ -68,6 +68,8 @@
     <Content Include="all.css" />
     <Content Include="application\lib\angular.min.js" />
     <Content Include="application\controllers\sequenceController.js" />
+    <Content Include="application\models\command.js" />
+    <Content Include="application\services\parserService.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
