@@ -66,10 +66,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="all.css" />
+<<<<<<< HEAD
+=======
+    <Content Include="application\directives\toolbox.js" />
+>>>>>>> master
     <Content Include="application\lib\angular.min.js" />
     <Content Include="application\controllers\sequenceController.js" />
     <Content Include="application\models\command.js" />
     <Content Include="application\services\parserService.js" />
+<<<<<<< HEAD
+=======
+    <Content Include="toolbox.html" />
+>>>>>>> master
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
