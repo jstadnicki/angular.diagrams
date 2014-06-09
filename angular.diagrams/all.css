@@ -1,0 +1,22 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.column {
+    display: inline-block;
+}
+
+.container {
+    font-size: 0;
+    width: 100%;
+}
+
+.col-1-3 {
+    width: 33%;
+}
+
+.col-2-3 {
+    width: 67%;
+}

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="ngDiagrams">
+<head>
+    <title></title>
+    <script src="application/lib/angular.min.js"></script>
+    <link href="all.css" rel="stylesheet" />
+    <script type="text/javascript">
+        angular.module('ngDiagrams', []);
+    </script>
+    <script src="application/models/command.js"></script>
+    <script src="application/services/parserService.js"></script>
+    <script src="application/controllers/sequenceController.js"></script>
+</head>
+<body>
+    <div class="container" ng-controller="sequenceController">
+        <div class="column col-1-3">
+            <div class="row">
+                <textarea ng-model="rawText"></textarea>
+            </div>
+            <div class="row">
+                <button ng-click="draw()">draw</button>
+            </div>
+        </div>
+        <div class="column col-2-3">
+            <!--<canvas width="100" height="100" id="mycanvas" style="border:1px solid black"></canvas>-->
+            <div ng-repeat="command in commands">
+                <div>{{command.toString()}}</div>
+
+            </div>
+        </div>
+
+        
+    </div>
+</body>
+</html>
