@@ -1,18 +1,4 @@
 angular.module('ngDiagrams')
-<<<<<<< HEAD
-    .controller('sequenceController', function ($scope, parserService) {
-        $scope.rawText = '';
-
-    $scope.commands = [];
-
-        $scope.draw=function() {
-
-
-            var commands = parserService.parse($scope.rawText);
-            $scope.commands = commands;
-
-
-=======
     .controller('sequenceController', function ($scope, $timeout, parserService, renderService) {
         $scope.rawText = 'A->B:foo();';
 
@@ -38,6 +24,5 @@ angular.module('ngDiagrams')
 
             $scope.textCanvas = renderResult;
             $scope.commands = commands;
->>>>>>> master
         }
     });
